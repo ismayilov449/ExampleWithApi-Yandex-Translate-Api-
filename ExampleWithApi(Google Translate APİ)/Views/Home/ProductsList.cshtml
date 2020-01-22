@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProductModel>
+
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<h1>ProductsList</h1>
+
+<table class="table">
+    <thead class="thead-inverse">
+        <tr>
+
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Description(ENG)</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+
+        @foreach (var productModel in Model)
+        {
+            <tr>
+
+                <td>@productModel.Product.Name</td>
+                <td>@productModel.Product.Price</td>
+                <td>@productModel.Product.Description</td>
+                <td>@productModel.DescriptionENG</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
